@@ -384,7 +384,7 @@ html, body {
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: transform 0.1s;
-    animation: float 3s ease-in-out infinite;
+   /* animation: float 3s ease-in-out infinite; */
     user-select: none;
     font-size: 1.1rem;
     display: flex;
