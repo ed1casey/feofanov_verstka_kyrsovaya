@@ -396,7 +396,6 @@ html, body {
 }
 
 .anomaly:hover {
-    zoom: 1.5;
     transform: scale(1.6);
 }
 
