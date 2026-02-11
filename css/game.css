@@ -396,7 +396,7 @@ html, body {
 }
 
 .anomaly:hover {
-    transform: scale(1.6);
+    transform: scale(1.1);
 }
 
 .anomaly.caught {
