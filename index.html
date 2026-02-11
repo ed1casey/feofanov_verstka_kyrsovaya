@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перемещение по времени - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/intro.css">
+</head>
+<body class="theme-dark">
+    <div id="particles-container"></div>
+
+    <div class="main-container">
+        <header class="game-header">
+            <h1 class="title-glow">Перемещение по времени</h1>
+        </header>
+
+        <section class="auth-section" id="auth-section">
+            <div class="auth-card">
+                <h2>Введите имя</h2>
+                <div class="input-wrapper">
+                    <input
+                        type="text"
+                        id="player-name"
+                        placeholder="Твоё имя..."
+                        maxlength="20"
+                        autocomplete="off"
+                    >
+                    <span class="input-border"></span>
+                </div>
+
+                <div class="auth-buttons">
+                    <button id="start-btn" class="btn btn-primary" disabled>
+                        <span class="btn-text">Начать</span>
+                    </button>
+                    <button id="rating-btn" class="btn btn-secondary">
+                        <span class="btn-text">Рейтинг игроков</span>
+                    </button>
+                </div>
+
+                <div class="teacher-hint">
+                    <small>введите "teacher" для режима проверки</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="theme-section">
+            <h3>Тема оформления</h3>
+            <div class="theme-buttons">
+                <button class="theme-btn active" data-theme="dark" title="Тёмная тема"></button>
+                <button class="theme-btn" data-theme="light" title="Светлая тема"></button>
+            </div>
+        </section>
+
+        <section class="rules-preview">
+            <h3>Как играть?</h3>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <p>Сортируй артефакты по эпохам</p>
+                </div>
+                <div class="rule-card">
+                    <p>Лови временные аномалии</p>
+                </div>
+                <div class="rule-card">
+                    <p>Восстанови хронологию событий</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="game-footer">
+        <p>Феофанов И.Р.</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/intro.js"></script>
+</body>
+</html>

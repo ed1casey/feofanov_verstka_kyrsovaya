@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перемещение по времени - Игра</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+</head>
+<body class="theme-dark">
+    <div id="particles-container"></div>
+
+    <header class="game-hud">
+        <div class="hud-left">
+            <div class="player-info">
+                <span id="player-name-display">Игрок</span>
+            </div>
+            <div class="level-info">
+                <span>Уровень: <span id="current-level">1</span>/3</span>
+            </div>
+        </div>
+
+        <div class="hud-center">
+            <div class="timer-container">
+                <span id="timer-display">02:00</span>
+                <div class="timer-bar">
+                    <div id="timer-progress" class="timer-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hud-right">
+            <div class="score-container">
+                <span>Очки: <span id="score-display">0</span></span>
+            </div>
+            <div class="combo-container" id="combo-container" style="display: none;">
+                <span class="combo-text">Комбо x<span id="combo-count">2</span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="teacher-panel" class="teacher-panel hidden">
+        <h3>Режим преподавателя</h3>
+        <div class="teacher-controls">
+            <button class="teacher-btn" data-level="1">Уровень 1</button>
+            <button class="teacher-btn" data-level="2">Уровень 2</button>
+            <button class="teacher-btn" data-level="3">Уровень 3</button>
+        </div>
+    </div>
+
+    <main class="game-area" id="game-area">
+        <div class="level-loading">
+            <div class="loading-spinner"></div>
+            <p>Загрузка уровня...</p>
+        </div>
+    </main>
+
+    <div class="question-panel" id="question-panel">
+        <p id="question-text">Задание появится здесь</p>
+        <div class="question-progress">
+            <span>Раунд: <span id="round-current">1</span>/<span id="round-total">5</span></span>
+        </div>
+    </div>
+
+    <div class="game-controls">
+        <button id="pause-btn" class="control-btn" title="Пауза (P)">
+            <span>||</span>
+        </button>
+        <button id="exit-btn" class="control-btn" title="Завершить уровень (Esc)">
+            <span>X</span>
+        </button>
+    </div>
+
+    <div id="pause-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Пауза</h2>
+            <p>Игра приостановлена</p>
+            <div class="modal-buttons">
+                <button id="resume-btn" class="btn btn-primary">Продолжить</button>
+                <button id="quit-btn" class="btn btn-danger">Выйти в меню</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="level-complete-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="level-result-title">Уровень пройден!</h2>
+            <div class="level-stats">
+                <p>Заработано очков: <span id="level-score">0</span></p>
+                <p>Правильных ответов: <span id="level-correct">0</span></p>
+                <p>Время: <span id="level-time">00:00</span></p>
+            </div>
+            <div class="modal-buttons">
+                <button id="next-level-btn" class="btn btn-primary">Следующий уровень</button>
+                <button id="retry-btn" class="btn btn-secondary">Попробовать снова</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content game-over-content">
+            <h2>Время вышло!</h2>
+            <p>Временной континуум нарушен...</p>
+            <div class="level-stats">
+                <p>Набрано очков: <span id="final-score">0</span></p>
+            </div>
+            <div class="modal-buttons">
+                <button id="restart-btn" class="btn btn-primary">Начать заново</button>
+                <button id="menu-btn" class="btn btn-secondary">В главное меню</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/gameData.js"></script>
+    <script src="js/level1.js"></script>
+    <script src="js/level2.js"></script>
+    <script src="js/level3.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

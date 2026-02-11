@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перемещение по времени - Рейтинг</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rating.css">
+</head>
+<body class="theme-dark">
+    <div id="particles-container"></div>
+
+    <div class="rating-container">
+        <header class="rating-header">
+            <h1>Зал Славы</h1>
+            <p class="subtitle">Лучшие путешественники во времени</p>
+        </header>
+
+        <section id="player-result" class="player-result hidden">
+            <div class="result-card">
+                <h2>Твой результат</h2>
+                <div class="result-details">
+                    <div class="result-item">
+                        <span class="result-label">Имя</span>
+                        <span id="result-name" class="result-value">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Очки</span>
+                        <span id="result-score" class="result-value">0</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Пройдено уровней</span>
+                        <span id="result-levels" class="result-value">0/3</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">Место в рейтинге</span>
+                        <span id="result-rank" class="result-value">#-</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="leaderboard-section">
+            <div class="leaderboard-header">
+                <h2>Топ игроков</h2>
+                <div class="leaderboard-filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="today">Сегодня</button>
+                    <button class="filter-btn" data-filter="week">Неделя</button>
+                </div>
+            </div>
+
+            <div class="leaderboard-table-wrapper">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th class="col-rank">Место</th>
+                            <th class="col-name">Игрок</th>
+                            <th class="col-score">Очки</th>
+                            <th class="col-levels">Уровни</th>
+                            <th class="col-date">Дата</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="empty-leaderboard" class="empty-state hidden">
+                <p>Пока никто не играл. Стань первым!</p>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>Общая статистика</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span id="total-players" class="stat-value">0</span>
+                    <span class="stat-label">Всего игроков</span>
+                </div>
+                <div class="stat-card">
+                    <span id="total-games" class="stat-value">0</span>
+                    <span class="stat-label">Сыграно игр</span>
+                </div>
+                <div class="stat-card">
+                    <span id="avg-score" class="stat-value">0</span>
+                    <span class="stat-label">Средний балл</span>
+                </div>
+                <div class="stat-card">
+                    <span id="max-score" class="stat-value">0</span>
+                    <span class="stat-label">Рекорд</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="navigation-buttons">
+            <button id="play-again-btn" class="btn btn-primary">
+                Играть снова
+            </button>
+            <button id="clear-data-btn" class="btn btn-danger">
+                Очистить рейтинг
+            </button>
+            <button id="back-btn" class="btn btn-secondary">
+                На главную
+            </button>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Подтверждение</h2>
+            <p>Ты уверен, что хочешь очистить весь рейтинг? Это действие нельзя отменить.</p>
+            <div class="modal-buttons">
+                <button id="confirm-clear" class="btn btn-danger">Да, очистить</button>
+                <button id="cancel-clear" class="btn btn-secondary">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="game-footer">
+        <p>Феофанов И.Р.</p>
+    </footer>
+
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/rating.js"></script>
+</body>
+</html>
