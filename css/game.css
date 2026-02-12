@@ -231,6 +231,7 @@ html, body {
     border-radius: 50%;
     border: 2px solid var(--border-color);
     background: var(--bg-card);
+    color: var(--text-primary);
     font-size: 1.5rem;
     cursor: pointer;
     transition: all var(--transition-normal);
