@@ -1,18 +1,18 @@
 const Level3 = {
     CONFIG: {
-        jumpPower: 18,
-        gravity: 0.6,
+        jumpPower: 16,
+        gravity: 0.4,
 
         speeds: {
-            1: 3,
-            2: 5,
-            3: 7
+            1: 2,
+            2: 3,
+            3: 4
         },
 
         spawnRates: {
-            1: 120,
-            2: 100,
-            3: 80
+            1: 150,
+            2: 140,
+            3: 130
         },
 
         pointsPerObstacle: 10
@@ -476,4 +476,5 @@ const Level3 = {
         return this.state.score;
     }
 };
+
 
