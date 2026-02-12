@@ -54,6 +54,10 @@ const Level3 = {
         this.resetState();
         this.selectRandomEpoch();
         this.render();
+        const questionPanel = $('#question-panel');
+        if (questionPanel) {
+            questionPanel.style.display = 'none';
+        }
         this.showStartMessage();
     },
 
@@ -444,6 +448,10 @@ const Level3 = {
         if (this.keyDownHandler) {
             document.removeEventListener('keydown', this.keyDownHandler);
         }
+        const questionPanel = $('#question-panel');
+        if (questionPanel) {
+            questionPanel.style.display = 'block';
+        }
     },
 
     pause() {
@@ -468,3 +476,4 @@ const Level3 = {
         return this.state.score;
     }
 };
+
